@@ -44,6 +44,8 @@ public class Main {
                 System.out.println("Incorrect operation!");
             }
         }
+
+        sc.close();
     }
 
     private int add(int a, int b) {
