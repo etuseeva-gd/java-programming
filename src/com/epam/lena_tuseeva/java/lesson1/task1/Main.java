@@ -9,27 +9,44 @@ public class Main {
         int[] array = this.genArray(-10, 10, 20);
         this.printArray("Initial array:", array);
 
-        int[] task1 = this.task1(array);
-        if (task1 == null) {
-            System.out.println("Task 1:");
-            System.out.println("No positive or negative elements");
+        //task1
+        int[] firstTask = this.swapMinPositiveMaxNegativeElements(array);
+        String firstTaskLabel = "Task 1 (Swap min positive and max negative elements):";
+        if (firstTask == null) {
+            System.out.println(firstTaskLabel);
+            System.out.println("No positive or negative elements!");
+            System.out.println();
         } else {
-            this.printArray("Task 1:", task1);
+            this.printArray(firstTaskLabel, firstTask);
         }
 
-        System.out.println("Task 2:");
-        System.out.println(this.task2(array));
+        //task2
+        System.out.println("Task 2 (Sum of elements in even positions):");
+        System.out.println(this.getSumOfElementsInEventPositions(array));
 
-        this.printArray("Task 3:", this.task3(array));
-        this.printArray("Task 4:", this.task4(array));
+        //task3
+        this.printArray("Task 3 (Replace negative elements with zeros):", this.replaceNegativeElementsWithZero(array));
 
-        System.out.println("Task 5:");
-        System.out.println(this.task5(array));
+        //task4
+        this.printArray("Task 4 (Triple positive element, if it stand before negative element):", this.triplePositiveElementsIfAfterNegativeElement(array));
 
-        this.printArray("Task 6:", this.task6(array));
+        //task5
+        System.out.println("Task 5 (Difference between average and min element):");
+        System.out.println(this.getDiffBetweenAverageAndMinElement(array));
+
+        //task6
+        int[] sixTask = this.getDuplicateElementsThatStandOnOddPositions(array);
+        String sixTaskLabel = "Task 6 (Print duplicate elements, it's stand on odd positions):";
+        if (sixTask == null) {
+            System.out.println(sixTaskLabel);
+            System.out.println("No duplicate elements!");
+            System.out.println();
+        } else {
+            this.printArray(sixTaskLabel, sixTask);
+        }
     }
 
-    int[] genArray(int minValue, int maxValue, int length) {
+    private int[] genArray(int minValue, int maxValue, int length) {
         int[] array = new int[length];
 
         int range = (maxValue - minValue) + 1;
@@ -40,7 +57,7 @@ public class Main {
         return array;
     }
 
-    void printArray(String label, int[] array) {
+    private void printArray(String label, int[] array) {
         System.out.println(label);
         for (int arrElem : array) {
             System.out.print(arrElem + " ");
@@ -48,7 +65,8 @@ public class Main {
         System.out.println();
     }
 
-    int[] task1(int[] array) {
+    //task1
+    private int[] swapMinPositiveMaxNegativeElements(int[] array) {
         int[] arrayClone = array.clone();
 
         int minPositiveElement = Integer.MAX_VALUE, minPositiveIndex = -1;
@@ -77,7 +95,8 @@ public class Main {
         return null;
     }
 
-    int task2(int[] array) {
+    //task2
+    private int getSumOfElementsInEventPositions(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i += 2) {
             sum += array[i];
@@ -85,7 +104,8 @@ public class Main {
         return sum;
     }
 
-    int[] task3(int[] array) {
+    //task3
+    private int[] replaceNegativeElementsWithZero(int[] array) {
         int[] arrayClone = array.clone();
 
         for (int i = 0; i < arrayClone.length; i++) {
@@ -97,7 +117,8 @@ public class Main {
         return arrayClone;
     }
 
-    int[] task4(int[] array) {
+    //task4
+    private int[] triplePositiveElementsIfAfterNegativeElement(int[] array) {
         int[] arrayClone = array.clone();
 
         for (int i = 0; i < arrayClone.length - 1; i++) {
@@ -109,7 +130,8 @@ public class Main {
         return arrayClone;
     }
 
-    double task5(int[] array) {
+    //task5
+    private double getDiffBetweenAverageAndMinElement(int[] array) {
         int minElement = array[0];
         int sumElements = 0;
 
@@ -121,7 +143,8 @@ public class Main {
         return (sumElements / array.length) - minElement;
     }
 
-    int[] task6(int[] array) {
+    //task6
+    private int[] getDuplicateElementsThatStandOnOddPositions(int[] array) {
         int[] used = new int[21];
 
         for (int i = 1; i < array.length; i += 2) {
