@@ -29,4 +29,10 @@ public class Student {
         this.courses.add(course);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(lastName).append(" ").append(firstName).append(" (").append(curriculum).append(")");
+        return String.valueOf(stringBuilder);
+    }
 }

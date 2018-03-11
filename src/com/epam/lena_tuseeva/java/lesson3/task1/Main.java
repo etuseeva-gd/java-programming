@@ -1,5 +1,6 @@
 package com.epam.lena_tuseeva.java.lesson3.task1;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -12,13 +13,13 @@ public class Main {
     private void run() {
         try {
             // Init zone
-            SimpleDateFormat format = new SimpleDateFormat("dd.MM.YYYY");
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/YYYY");
 
-            Student ivan = new Student("Ivan", "Ivanov", "J2EE Developer", format.parse("10.03.2018"));
+            Student ivan = new Student("Ivan", "Ivanov", "J2EE Developer", format.parse("08/03/2018"));
             ivan.addCourse("Технология Java Servlets", 16);
             ivan.addCourse("Struts Framework", 24);
 
-            Student petr = new Student("Petr", "Petrov", "Java Developer", format.parse("11.03.2018"));
+            Student petr = new Student("Petr", "Petrov", "Java Developer", format.parse("09/03/2018"));
             petr.addCourse("Обзор технологий Java", 8);
             petr.addCourse("Библиотека JFC/Swing", 16);
             petr.addCourse("Технология JDBC", 16);
@@ -33,12 +34,15 @@ public class Main {
             System.out.println("1 - simple report");
             System.out.println("2 - full report");
 
-            int action = sc.nextInt();
+//            int action = sc.nextInt();
+            int action = 1;
             switch (action) {
                 case 1: {
+                    center.printReport();
                     break;
                 }
                 case 2: {
+                    center.printFullReport();
                     break;
                 }
                 default: {

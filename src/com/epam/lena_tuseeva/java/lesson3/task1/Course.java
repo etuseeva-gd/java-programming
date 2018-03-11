@@ -8,4 +8,9 @@ public class Course {
         this.name = name;
         this.duration = duration;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(new StringBuilder().append(name).append(" ").append("Длительность: ").append(duration));
+    }
 }
