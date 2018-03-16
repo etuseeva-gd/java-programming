@@ -1,9 +1,6 @@
 package com.epam.lena_tuseeva.java.lesson1.task2;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     private Scanner sc = null;
@@ -173,6 +170,7 @@ public class Main {
     private void printSecondWordWithAllNumbers(String[] words) {
         System.out.println("Task6:");
 
+        String firstWord = null;
         int k = 0;
         for (String word : words) {
             Set<Character> chars = new HashSet<>();
@@ -189,12 +187,18 @@ public class Main {
 
             if (onlyNumbers) {
                 if (k == 0) {
+                    firstWord = word;
                     k++;
                 } else if (k == 1) {
                     System.out.printf("Second word with all number-chars = " + word);
                     return;
                 }
             }
+        }
+
+        if (firstWord != null) {
+            System.out.printf("Fist word with all number-chars = " + firstWord);
+            return;
         }
 
         System.out.println("No such words!");
