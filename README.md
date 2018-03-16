@@ -7,17 +7,16 @@
 #### Lesson 2
 * [ ] Complete
 * [x] Remove collection
-* [ ] Fix packages
+* [x] Fix packages
 
 #### Lesson 3
 * [ ] Complete
 
 #### Lesson 4
 * [ ] Complete
-* [ ] Fix packages
 
 #### Lesson 5
-* [ ] Complete
+* [x] Complete
 
 #### Lesson 6
 * [ ] Complete
