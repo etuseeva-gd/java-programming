@@ -1,4 +1,6 @@
-package com.epam.lena_tuseeva.java.lesson5.task1.Salad;
+package com.epam.lena_tuseeva.java.lesson5.task1.models;
+
+import com.epam.lena_tuseeva.java.lesson5.task1.interfaces.Vegetable;
 
 import java.util.List;
 

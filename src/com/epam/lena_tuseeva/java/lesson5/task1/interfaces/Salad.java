@@ -1,4 +1,6 @@
-package com.epam.lena_tuseeva.java.lesson5.task1.Salad;
+package com.epam.lena_tuseeva.java.lesson5.task1.interfaces;
+
+import com.epam.lena_tuseeva.java.lesson5.task1.models.ISalad;
 
 import java.util.ArrayList;
 import java.util.List;

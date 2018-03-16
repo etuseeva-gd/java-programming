@@ -1,6 +1,6 @@
 package com.epam.lena_tuseeva.java.lesson5.task1;
 
-import com.epam.lena_tuseeva.java.lesson5.task1.Salad.*;
+import com.epam.lena_tuseeva.java.lesson5.task1.interfaces.*;
 
 import java.util.List;
 
