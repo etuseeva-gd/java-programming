@@ -5,7 +5,7 @@
 * [x] Malfunctioning task 2.6
 
 #### Lesson 2
-* [ ] Complete
+* [x] Complete
 * [x] Remove collection
 * [x] Fix packages
 
