@@ -1,8 +1,6 @@
 package com.epam.lena_tuseeva.java.lesson2.task1;
 
-import com.epam.lena_tuseeva.java.lesson2.task1.Salad.*;
-
-import java.util.List;
+import com.epam.lena_tuseeva.java.lesson2.task1.models.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,7 +44,7 @@ public class Main {
     }
 
     private void printVegetables(Vegetable vegetables[]) {
-        for(Vegetable vegetable : vegetables) {
+        for (Vegetable vegetable : vegetables) {
             printVegetable(vegetable);
         }
         System.out.println();

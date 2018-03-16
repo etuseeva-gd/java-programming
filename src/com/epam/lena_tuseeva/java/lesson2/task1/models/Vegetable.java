@@ -1,4 +1,4 @@
-package com.epam.lena_tuseeva.java.lesson2.task1.Salad;
+package com.epam.lena_tuseeva.java.lesson2.task1.models;
 
 public class Vegetable {
     private Integer calories = null;

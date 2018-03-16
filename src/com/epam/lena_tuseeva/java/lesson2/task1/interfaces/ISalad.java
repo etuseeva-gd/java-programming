@@ -1,4 +1,6 @@
-package com.epam.lena_tuseeva.java.lesson2.task1.Salad;
+package com.epam.lena_tuseeva.java.lesson2.task1.interfaces;
+
+import com.epam.lena_tuseeva.java.lesson2.task1.models.Vegetable;
 
 public interface ISalad {
     public void add(int index, Vegetable vegetable);
