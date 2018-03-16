@@ -14,7 +14,7 @@
 
 #### Lesson 4
 * [ ] Complete
-* [x] Fix packages
+* [ ] Fix packages
 
 #### Lesson 5
 * [ ] Complete
