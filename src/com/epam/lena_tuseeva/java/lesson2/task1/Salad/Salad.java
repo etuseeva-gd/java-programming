@@ -1,27 +1,25 @@
 package com.epam.lena_tuseeva.java.lesson2.task1.Salad;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 
 public class Salad implements ISalad {
-    private List<Vegetable> vegetables = null;
+    private Vegetable[] vegetables = null;
 
-    public Salad() {
-        this.vegetables = new ArrayList<>();
+    public Salad(int n) {
+        this.vegetables = new Vegetable[n];
     }
 
-    public List<Vegetable> getVegetables() {
+    public Vegetable[] getVegetables() {
         return vegetables;
     }
 
-    public void add(Vegetable vegetable) {
-        this.vegetables.add(vegetable);
+    public void add(int index, Vegetable vegetable) {
+        this.vegetables[index] = vegetable;
     }
 
     //sort by weight
     public void sort() {
-        this.vegetables.sort((firstVegetable, secondVegetable) -> {
+        Arrays.sort(this.vegetables, (firstVegetable, secondVegetable) -> {
             Integer firstWeight = firstVegetable.getWeight();
             Integer secondWeight = secondVegetable.getWeight();
             return firstWeight.compareTo(secondWeight);
@@ -29,16 +27,32 @@ public class Salad implements ISalad {
     }
 
     public int getSaladCalories() {
-        return this.vegetables.stream()
-                .map(Vegetable::getCalories)
-                .reduce(0, (a, b) -> a + b);
+        int cal = 0;
+        for (Vegetable vegetable : this.vegetables) {
+            cal += vegetable.getCalories();
+        }
+        return cal;
     }
 
-    public List<Vegetable> findVegetablesByWeight(int min, int max) {
-        return this.vegetables.stream().filter(vegetable -> {
+    public Vegetable[] findVegetablesByWeight(int min, int max) {
+        int n = 0;
+        for (Vegetable vegetable : this.vegetables) {
             int weight = vegetable.getWeight();
-            return weight >= min && weight <= max;
-        }).collect(Collectors.toList());
+            if (weight >= min && weight <= max) {
+                n++;
+            }
+        }
+
+        int i = 0;
+        Vegetable[] result = new Vegetable[n];
+        for (Vegetable vegetable : this.vegetables) {
+            int weight = vegetable.getWeight();
+            if (weight >= min && weight <= max) {
+                result[++i] = vegetable;
+            }
+        }
+
+        return result;
     }
 
     @Override
