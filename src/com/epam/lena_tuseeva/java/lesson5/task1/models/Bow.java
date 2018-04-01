@@ -1,4 +1,4 @@
-package com.epam.lena_tuseeva.java.lesson5.task1.interfaces;
+package com.epam.lena_tuseeva.java.lesson5.task1.models;
 
 public class Bow extends Vegetable {
     public enum TypeBow {

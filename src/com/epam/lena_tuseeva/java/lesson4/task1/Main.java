@@ -1,8 +1,6 @@
-package com.epam.lena_tuseeva.java.lesson5.task1;
+package com.epam.lena_tuseeva.java.lesson4.task1;
 
-import com.epam.lena_tuseeva.java.lesson5.task1.models.*;
-
-import java.util.List;
+import com.epam.lena_tuseeva.java.lesson4.task1.models.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,12 +14,13 @@ public class Main {
         Cucumber cucumber = new Cucumber(16, 80, Cucumber.StateCucumber.Fresh);
 
 //        Create salad
-        Salad salad = new Salad();
+        Salad salad = new Salad(4);
 
-        salad.add(tomato);
-        salad.add(tomato);
-        salad.add(bow);
-        salad.add(cucumber);
+        int i = 0;
+        salad.add(++i, tomato);
+        salad.add(++i, tomato);
+        salad.add(++i, bow);
+        salad.add(++i, cucumber);
 
 //        Operations with salad
         System.out.println("Salad calories: ");
@@ -44,8 +43,10 @@ public class Main {
         this.printVegetables(salad.findVegetablesByWeight(80, 150));
     }
 
-    private void printVegetables(List<Vegetable> vegetables) {
-        vegetables.forEach(this::printVegetable);
+    private void printVegetables(Vegetable vegetables[]) {
+        for (Vegetable vegetable : vegetables) {
+            printVegetable(vegetable);
+        }
         System.out.println();
     }
 
