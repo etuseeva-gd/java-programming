@@ -2,12 +2,9 @@
 
 #### Lesson 1
 * [x] Complete
-* [x] Malfunctioning task 2.6
 
 #### Lesson 2
 * [x] Complete
-* [x] Remove collection
-* [x] Fix packages
 
 #### Lesson 3
 * [ ] Complete
