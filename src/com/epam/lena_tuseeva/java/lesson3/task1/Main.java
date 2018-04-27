@@ -16,7 +16,7 @@ public class Main {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
             // Students
-            Student firstStudent = new Student("Ivan", "Ivanov", "J2EE Developer", simpleDateFormat.parse("27.03.2018"));
+            Student firstStudent = new Student("Ivan", "Ivanov", "J2EE Developer", simpleDateFormat.parse("27.04.2018"));
             Student secondStudent = new Student("Petr", "Petrov", "Java Developer", simpleDateFormat.parse("02.04.2018"));
 
             // Courses
@@ -24,7 +24,7 @@ public class Main {
             Course strutsFrameworkCourse = new Course("Struts Framework", 24);
             Course javaTechnologiesCourse = new Course("Обзор технологий Java", 8);
             Course JFCLibraryCourse = new Course("Библиотека JFC/Swing", 16);
-            Course JDBCTechnologyCouse = new Course("Технология JDBC", 16);
+            Course JDBCTechnologyCourse = new Course("Технология JDBC", 16);
 
             // Add student on courses
             firstStudent.addCourse(javaServletsCourse);
@@ -32,7 +32,7 @@ public class Main {
 
             secondStudent.addCourse(javaTechnologiesCourse);
             secondStudent.addCourse(JFCLibraryCourse);
-            secondStudent.addCourse(JDBCTechnologyCouse);
+            secondStudent.addCourse(JDBCTechnologyCourse);
 
             // Center
             EducationalCenter center = new EducationalCenter();
@@ -46,15 +46,15 @@ public class Main {
             System.out.println("1 - simple report");
             System.out.println("2 - full report");
 
-//            int action = sc.nextInt();
-            int action = 1;
+            int action = sc.nextInt();
+//            int action = 1;
             switch (action) {
                 case 1: {
-                    center.printReport();
+                    center.printReport(false);
                     break;
                 }
                 case 2: {
-                    center.printFullReport();
+                    center.printReport(true);
                     break;
                 }
                 default: {
