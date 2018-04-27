@@ -13,20 +13,32 @@ public class Main {
     private void run() {
         try {
             // Init zone
-            SimpleDateFormat format = new SimpleDateFormat("dd/MM/YYYY");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
-            Student ivan = new Student("Ivan", "Ivanov", "J2EE Developer", format.parse("08/03/2018"));
-            ivan.addCourse("Технология Java Servlets", 16);
-            ivan.addCourse("Struts Framework", 24);
+            // Students
+            Student firstStudent = new Student("Ivan", "Ivanov", "J2EE Developer", simpleDateFormat.parse("27.03.2018"));
+            Student secondStudent = new Student("Petr", "Petrov", "Java Developer", simpleDateFormat.parse("02.04.2018"));
 
-            Student petr = new Student("Petr", "Petrov", "Java Developer", format.parse("09/03/2018"));
-            petr.addCourse("Обзор технологий Java", 8);
-            petr.addCourse("Библиотека JFC/Swing", 16);
-            petr.addCourse("Технология JDBC", 16);
+            // Courses
+            Course javaServletsCourse = new Course("Технология Java Servlets", 16);
+            Course strutsFrameworkCourse = new Course("Struts Framework", 24);
+            Course javaTechnologiesCourse = new Course("Обзор технологий Java", 8);
+            Course JFCLibraryCourse = new Course("Библиотека JFC/Swing", 16);
+            Course JDBCTechnologyCouse = new Course("Технология JDBC", 16);
 
+            // Add student on courses
+            firstStudent.addCourse(javaServletsCourse);
+            firstStudent.addCourse(strutsFrameworkCourse);
+
+            secondStudent.addCourse(javaTechnologiesCourse);
+            secondStudent.addCourse(JFCLibraryCourse);
+            secondStudent.addCourse(JDBCTechnologyCouse);
+
+            // Center
             EducationalCenter center = new EducationalCenter();
-            center.addStudent(ivan);
-            center.addStudent(petr);
+            center.addStudent(firstStudent);
+            center.addStudent(secondStudent);
+
             // End init zone
 
             Scanner sc = new Scanner(System.in);
