@@ -8,6 +8,9 @@ public class Salad implements ISalad {
     private Vegetable[] vegetables = null;
 
     public Salad(int n) {
+        if (n < 0) {
+            throw new NegativeArraySizeException("Not correct array size!");
+        }
         this.vegetables = new Vegetable[n];
     }
 
@@ -16,6 +19,9 @@ public class Salad implements ISalad {
     }
 
     public void add(int index, Vegetable vegetable) {
+        if (index < 0) {
+            throw new ArrayIndexOutOfBoundsException("Negative index!");
+        }
         this.vegetables[index] = vegetable;
     }
 
@@ -36,7 +42,11 @@ public class Salad implements ISalad {
         return cal;
     }
 
-    public Vegetable[] findVegetablesByWeight(int min, int max) {
+    public Vegetable[] findVegetablesByWeight(int min, int max) throws Exception {
+        if (min > max) {
+            throw new Exception("Min more than max!");
+        }
+
         int n = 0;
         for (Vegetable vegetable : this.vegetables) {
             int weight = vegetable.getWeight();

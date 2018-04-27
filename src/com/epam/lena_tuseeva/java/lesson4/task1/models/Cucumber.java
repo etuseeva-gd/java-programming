@@ -1,5 +1,8 @@
 package com.epam.lena_tuseeva.java.lesson4.task1.models;
 
+import com.epam.lena_tuseeva.java.lesson4.task1.exceptions.NegativeCaloriesException;
+import com.epam.lena_tuseeva.java.lesson4.task1.exceptions.NegativeWeightException;
+
 public class Cucumber extends Vegetable {
     public enum StateCucumber {
         Fresh,
@@ -9,7 +12,7 @@ public class Cucumber extends Vegetable {
 
     private StateCucumber state = null;
 
-    public Cucumber(Integer calories, Integer weight, StateCucumber state) {
+    public Cucumber(Integer calories, Integer weight, StateCucumber state) throws NegativeCaloriesException, NegativeWeightException {
         super(calories, weight);
 
         this.state = state;

@@ -1,5 +1,8 @@
 package com.epam.lena_tuseeva.java.lesson4.task1.models;
 
+import com.epam.lena_tuseeva.java.lesson4.task1.exceptions.NegativeCaloriesException;
+import com.epam.lena_tuseeva.java.lesson4.task1.exceptions.NegativeWeightException;
+
 public class Bow extends Vegetable {
     public enum TypeBow {
         Leek,
@@ -10,7 +13,7 @@ public class Bow extends Vegetable {
 
     private TypeBow type = null;
 
-    public Bow(Integer calories, Integer weight, TypeBow type) {
+    public Bow(Integer calories, Integer weight, TypeBow type) throws NegativeCaloriesException, NegativeWeightException {
         super(calories, weight);
 
         this.type = type;

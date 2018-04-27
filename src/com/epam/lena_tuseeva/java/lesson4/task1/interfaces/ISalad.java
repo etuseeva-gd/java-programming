@@ -9,5 +9,5 @@ public interface ISalad {
 
     public int getSaladCalories();
 
-    public Vegetable[] findVegetablesByWeight(int min, int max);
+    public Vegetable[] findVegetablesByWeight(int min, int max) throws Exception;
 }
