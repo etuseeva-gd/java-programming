@@ -11,7 +11,8 @@
 * [x] Not reviewed 
 
 #### Lesson 4
-* [ ] Complete
+* [x] Complete
+* [x] Not reviewed 
 
 #### Lesson 5
 * [x] Complete
