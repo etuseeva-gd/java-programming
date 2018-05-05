@@ -1,8 +1,6 @@
 package com.epam.lena_tuseeva.java.lesson8.task1.models;
 
-import java.io.Serializable;
-
-public class Vegetable implements Serializable {
+public class Vegetable {
     private Integer calories = null;
     private Integer weight = null;
 

@@ -1,13 +1,10 @@
 package com.epam.lena_tuseeva.java.lesson8.task1.models;
 
-import com.epam.lena_tuseeva.java.lesson8.task1.interfaces.ISalad;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Salad implements ISalad, Serializable {
+public class Salad {
     private List<Vegetable> vegetables = null;
 
     public Salad() {
