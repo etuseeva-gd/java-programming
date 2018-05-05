@@ -6,7 +6,7 @@ public class Nutritive {
     private int fats;
     private int carbohydrates;
 
-    Nutritive(int calorific, int proteins, int fats, int carbohydrates) {
+    public Nutritive(int calorific, int proteins, int fats, int carbohydrates) {
         this.calorific = calorific;
         this.proteins = proteins;
         this.fats = fats;

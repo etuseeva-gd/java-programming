@@ -1,26 +1,8 @@
 package com.epam.lena_tuseeva.java.lesson8.task1.models;
 
 public class Cucumber extends Vegetable {
-    public enum StateCucumber {
-        Fresh,
-        Salty,
-        Marinated,
-    }
-
-    private StateCucumber state = null;
-
-    public Cucumber(Integer calories, Integer weight, StateCucumber state) {
-        super(calories, weight);
-
-        this.state = state;
-    }
-
-    public void setState(StateCucumber state) {
-        this.state = state;
-    }
-
-    public StateCucumber getState() {
-        return state;
+    public Cucumber(Nutritive nutritive, String vitamins, String color, String wayForEating) {
+        super(nutritive, vitamins, color, wayForEating);
     }
 
     @Override

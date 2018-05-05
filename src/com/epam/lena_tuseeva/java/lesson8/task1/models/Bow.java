@@ -1,27 +1,8 @@
 package com.epam.lena_tuseeva.java.lesson8.task1.models;
 
 public class Bow extends Vegetable {
-    public enum TypeBow {
-        Leek,
-        Bulbous,
-        RedOnion,
-        Simple
-    }
-
-    private TypeBow type = null;
-
-    public Bow(Integer calories, Integer weight, TypeBow type) {
-        super(calories, weight);
-
-        this.type = type;
-    }
-
-    public TypeBow getType() {
-        return type;
-    }
-
-    public void setType(TypeBow type) {
-        this.type = type;
+    public Bow(Nutritive nutritive, String vitamins, String color, String wayForEating) {
+        super(nutritive, vitamins, color, wayForEating);
     }
 
     @Override

@@ -1,24 +1,8 @@
 package com.epam.lena_tuseeva.java.lesson8.task1.models;
 
 public class Tomato extends Vegetable {
-    public enum TypeTomato {
-        Simple,
-        Cherry,
-    }
-
-    private TypeTomato type = null;
-
-    public Tomato(Integer calories, Integer weight, TypeTomato type) {
-        super(calories, weight);
-        this.type = type;
-    }
-
-    public void setType(TypeTomato type) {
-        this.type = type;
-    }
-
-    public TypeTomato getType() {
-        return type;
+    public Tomato(Nutritive nutritive, String vitamins, String color, String wayForEating) {
+        super(nutritive, vitamins, color, wayForEating);
     }
 
     @Override

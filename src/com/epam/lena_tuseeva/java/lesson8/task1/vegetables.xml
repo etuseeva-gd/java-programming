@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vegetables>
+    <vegetable>
+        <firstname>Cucumber</firstname>
+        <type>cucumber</type>
+        <calorific>25</calorific>
+        <proteins>10</proteins>
+        <fats>20</fats>
+        <carbohydrates>30</carbohydrates>
+        <vitamins>b</vitamins>
+        <color>green</color>
+        <way_for_eating>fresh</way_for_eating>
+    </vegetable>
+    <vegetable>
+        <firstname>Bow</firstname>
+        <type>napiform</type>
+        <calorific>35</calorific>
+        <proteins>40</proteins>
+        <fats>25</fats>
+        <carbohydrates>15</carbohydrates>
+        <vitamins>c</vitamins>
+        <color>green</color>
+        <way_for_eating>fresh</way_for_eating>
+    </vegetable>
+    <vegetable>
+        <firstname>Tomato</firstname>
+        <type>tomato</type>
+        <calorific>40</calorific>
+        <proteins>20</proteins>
+        <fats>30</fats>
+        <carbohydrates>40</carbohydrates>
+        <vitamins>c</vitamins>
+        <color>red</color>
+        <way_for_eating>fresh</way_for_eating>
+    </vegetable>
+</vegetables>
