@@ -23,15 +23,11 @@ public class Main {
         int action = scanner.nextInt();
         switch (action) {
             case 1: {
-                Salad salad = this.createSimpleSalad();
-                this.serializeSalad(salad);
+                this.serialize();
                 break;
             }
             case 2: {
-                // @todo file name to const
-                Salad salad = this.deserializeSalad("salad.txt");
-                System.out.println("Salad:");
-                this.printVegetables(salad.getVegetables());
+                this.deserialize();
                 break;
             }
             default: {
@@ -40,6 +36,18 @@ public class Main {
         }
 
         scanner.close();
+    }
+
+    private void serialize() throws IOException {
+        Salad salad = this.createSimpleSalad();
+        this.serializeSalad(salad);
+    }
+
+    private void deserialize() throws IOException, ClassNotFoundException {
+        // @todo file name to const
+        Salad salad = this.deserializeSalad("salad.txt");
+        System.out.println("Salad:");
+        this.printVegetables(salad.getVegetables());
     }
 
     private Salad createSimpleSalad() {

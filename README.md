@@ -16,7 +16,8 @@
 * [x] Complete
 
 #### Lesson 6
-* [ ] Complete
+* [x] Complete
+* [x] Not review
 
 #### Lesson 7
 * [ ] Complete
