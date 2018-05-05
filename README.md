@@ -23,5 +23,6 @@
 * [ ] Complete
 
 #### Lesson 8
-* [ ] Complete
+* [x] Complete
+* [x] Not review
 
