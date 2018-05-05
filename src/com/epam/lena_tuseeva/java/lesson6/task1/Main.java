@@ -1,13 +1,15 @@
 package com.epam.lena_tuseeva.java.lesson6.task1;
 
 import com.epam.lena_tuseeva.java.lesson6.task1.models.*;
-import com.epam.lena_tuseeva.java.lesson6.task1.utils.Helpers;
+import com.epam.lena_tuseeva.java.lesson6.task1.utils.Connector;
 
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    private final String prefixOfFiles = "src/com/epam/lena_tuseeva/java/lesson6/task1/";
+
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         new Main().run();
     }
@@ -69,12 +71,12 @@ public class Main {
     }
 
     private void serializeSalad(Salad salad) throws IOException {
-        File fileOfSalad = new File(Helpers.prefixOfFiles + "salad.txt");
-        Helpers.printObject(fileOfSalad, salad);
+        File fileOfSalad = new File(this.prefixOfFiles + "salad.txt");
+        Connector.printObject(fileOfSalad, salad);
     }
 
     private Salad deserializeSalad(String fileName) throws IOException, ClassNotFoundException {
-        File fileOfSalad = new File(Helpers.prefixOfFiles + fileName);
-        return (Salad) Helpers.readObject(fileOfSalad);
+        File fileOfSalad = new File(this.prefixOfFiles + fileName);
+        return (Salad) Connector.readObject(fileOfSalad);
     }
 }
