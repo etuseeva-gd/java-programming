@@ -7,6 +7,10 @@ public class Cucumber extends Vegetable {
 
     @Override
     public String toString() {
-        return "[Object] Cucumber";
+        StringBuilder strVegetable = new StringBuilder();
+        strVegetable
+                .append("[Object] Cucumber").append("\n")
+                .append(super.toString()).append("\n");
+        return String.valueOf(strVegetable);
     }
 }

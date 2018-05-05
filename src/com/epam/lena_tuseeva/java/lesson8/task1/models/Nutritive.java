@@ -28,4 +28,15 @@ public class Nutritive {
     public int getProteins() {
         return proteins;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder strNutritive = new StringBuilder();
+        strNutritive
+                .append("Calorific: ").append(calorific).append("\n")
+                .append("Proteins: ").append(proteins).append("\n")
+                .append("Fats: ").append(fats).append("\n")
+                .append("Carbohydrates: ").append(carbohydrates).append("\n");
+        return String.valueOf(strNutritive);
+    }
 }

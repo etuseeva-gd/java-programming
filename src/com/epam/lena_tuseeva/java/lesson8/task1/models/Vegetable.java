@@ -31,6 +31,13 @@ public class Vegetable {
 
     @Override
     public String toString() {
-        return "[Object] Vegetable";
+        StringBuilder strVegetable = new StringBuilder();
+        strVegetable
+                .append("[Object] Vegetable").append("\n")
+                .append(nutritive.toString())
+                .append("Vitamins: ").append(vitamins).append("\n")
+                .append("Color: ").append(color).append("\n")
+                .append("WayForEating: ").append(wayForEating).append("\n");
+        return String.valueOf(strVegetable);
     }
 }

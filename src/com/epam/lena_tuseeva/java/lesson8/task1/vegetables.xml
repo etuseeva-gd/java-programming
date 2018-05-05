@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vegetables>
     <vegetable>
-        <firstname>Cucumber</firstname>
+        <name>Cucumber</name>
         <type>cucumber</type>
         <calorific>25</calorific>
         <proteins>10</proteins>
@@ -12,7 +12,7 @@
         <way_for_eating>fresh</way_for_eating>
     </vegetable>
     <vegetable>
-        <firstname>Bow</firstname>
+        <name>Bow</name>
         <type>napiform</type>
         <calorific>35</calorific>
         <proteins>40</proteins>
@@ -23,7 +23,7 @@
         <way_for_eating>fresh</way_for_eating>
     </vegetable>
     <vegetable>
-        <firstname>Tomato</firstname>
+        <name>Tomato</name>
         <type>tomato</type>
         <calorific>40</calorific>
         <proteins>20</proteins>

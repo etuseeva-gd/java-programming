@@ -7,6 +7,10 @@ public class Tomato extends Vegetable {
 
     @Override
     public String toString() {
-        return "[Object] Tomato";
+        StringBuilder strVegetable = new StringBuilder();
+        strVegetable
+                .append("[Object] Tomato").append("\n")
+                .append(super.toString()).append("\n");
+        return String.valueOf(strVegetable);
     }
 }

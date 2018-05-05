@@ -7,6 +7,10 @@ public class Bow extends Vegetable {
 
     @Override
     public String toString() {
-        return "[Object] Bow";
+        StringBuilder strVegetable = new StringBuilder();
+        strVegetable
+                .append("[Object] Bow").append("\n")
+                .append(super.toString()).append("\n");
+        return String.valueOf(strVegetable);
     }
 }

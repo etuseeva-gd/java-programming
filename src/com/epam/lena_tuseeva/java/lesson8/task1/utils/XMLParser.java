@@ -1,6 +1,6 @@
 package com.epam.lena_tuseeva.java.lesson8.task1.utils;
 
-import com.epam.lena_tuseeva.java.lesson6.task1.models.Vegetable;
+import com.epam.lena_tuseeva.java.lesson8.task1.models.Vegetable;
 import com.epam.lena_tuseeva.java.lesson8.task1.models.Nutritive;
 
 import org.w3c.dom.Document;
@@ -11,13 +11,13 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class XMLParser {
-    public static final String prefixOfClasses = "com.epam.lena_tuseeva.java.lesson8.task1.models.";
 
     public static Vegetable getVegetableByXML(File file, String vegetableName) {
         Vegetable vegetable = null;
@@ -36,19 +36,20 @@ public class XMLParser {
                     Element element = (Element) nNode;
 
                     if (getTextElement(element, "name").equals(vegetableName)) {
+                        // Params
                         int calorific = XMLParser.parseElement(element, "calorific");
                         int proteins = XMLParser.parseElement(element, "proteins");
                         int fats = XMLParser.parseElement(element, "fats");
                         int carbohydrates = XMLParser.parseElement(element, "carbohydrates");
-
                         String vitamins = getTextElement(element, "vitamins");
                         String color = getTextElement(element, "color");
                         String wayForEating = getTextElement(element, "way_for_eating");
 
-                        String nameOfVegetable = XMLParser.prefixOfClasses + vegetableName;
+                        String nameOfVegetable = Helpers.getPathToClass(vegetableName);
 
                         Class<?> vegetableClass = Class.forName(nameOfVegetable);
-                        Constructor<?> constructor = vegetableClass.getDeclaredConstructor(Nutritive.class);
+                        Constructor<?> constructor = vegetableClass
+                                .getDeclaredConstructor(Nutritive.class, String.class, String.class, String.class);
 
                         // Create classes
                         Nutritive nutritive = new Nutritive(calorific, proteins, fats, carbohydrates);
