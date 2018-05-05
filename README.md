@@ -20,7 +20,8 @@
 * [x] Not review
 
 #### Lesson 7
-* [ ] Complete
+* [x] Complete
+* [x] Not review
 
 #### Lesson 8
 * [x] Complete
